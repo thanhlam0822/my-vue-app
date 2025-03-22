@@ -37,6 +37,7 @@ jobs:
 
       - name: Run npm audit
         run: npm audit fix
+#        run: npm audit --audit-level=high
 
   build:
     runs-on: ubuntu-latest
