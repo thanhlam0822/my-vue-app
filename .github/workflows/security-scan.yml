@@ -49,9 +49,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Login to DockerHub
+        run: echo chuthanhlam | docker login -u thanhlam0822 --password-stdin
+
       - name: Build Docker image
         run: |
           docker build -t my-vue-app:latest .
+
+      - name: Push Docker image
+        run: docker tag my-vue-app:latest thanhlam0822/my-vue-app:latest && docker push thanhlam0822/my-vue-app:latest
 
   scan:
     runs-on: ubuntu-latest
