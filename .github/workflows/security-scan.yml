@@ -25,6 +25,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Run vue Cli Service
+        run: npm i @vue/cli-service
+
       - name: Run ESLint
         run: npm run lint
 
