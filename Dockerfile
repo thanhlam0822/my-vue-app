@@ -4,6 +4,7 @@ WORKDIR /app
 COPY package.json ./
 RUN npm install
 COPY . .
+RUN npm i @vue/cli-service
 RUN npm run build
 
 # Sử dụng Nginx để chạy Vue
