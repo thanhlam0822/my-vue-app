@@ -73,4 +73,4 @@ jobs:
           sudo dpkg -i trivy_0.38.2_Linux-64bit.deb
 
       - name: Scan Docker image for vulnerabilities
-        run: trivy image my-vue-app:latest --exit-code 1 --severity HIGH,CRITICAL
+        run: trivy image thanhlam0822/my-vue-app:latest --exit-code 1 --severity HIGH,CRITICAL
